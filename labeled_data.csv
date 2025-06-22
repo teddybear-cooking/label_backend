@@ -1,0 +1,14 @@
+This is a direct input sentence,normal
+This is a test sentence,normal
+User typed this offensive text,offensive
+This is a test paragraph,normal
+It contains multiple sentences,normal
+Each sentence will be processed separately,normal
+This is a test paragraph from the frontend,normal
+It should be split into multiple sentences,normal
+Each sentence will be stored for labeling,normal
+I love you,normal
+I hate you,normal
+what he fucking doing,offensive
+Damm,hate_speech
+Hello mother fucker,offensive
