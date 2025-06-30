@@ -1,9 +1,7 @@
 services:
   - type: web
     name: labeling-backend
-    env: java
-    buildCommand: ./mvnw clean package -DskipTests
-    startCommand: java -jar -Dspring.profiles.active=prod target/labeling_-0.0.1-SNAPSHOT.jar
+    env: docker
     healthCheckPath: /actuator/health
     envVars:
       - key: SPRING_PROFILES_ACTIVE
