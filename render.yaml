@@ -4,10 +4,6 @@ services:
     env: docker
     healthCheckPath: /actuator/health
     envVars:
-      - key: SPRING_PROFILES_ACTIVE
-        value: prod
       - key: FRONTEND_URL
-        value: https://label-frontend-rho.vercel.app
-    regions:
-      - us-east-1
-    plan: free  # or starter, standard, pro based on your needs 
+        value: http://label-frontend-rho.vercel.app  # Update this with your actual frontend URL when you deploy frontend
+    plan: free 
