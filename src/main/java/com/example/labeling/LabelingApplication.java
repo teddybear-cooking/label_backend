@@ -18,12 +18,16 @@ public class LabelingApplication {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                String frontendUrl = System.getenv("FRONTEND_URL");
-                if (frontendUrl == null) {
-                    frontendUrl = "http://localhost:3000";
+                String frontendUrls = System.getenv("FRONTEND_URL");
+                if (frontendUrls == null || frontendUrls.isEmpty()) {
+                    frontendUrls = "http://localhost:3000";
                 }
+                
+                // Support multiple domains separated by commas
+                String[] allowedOrigins = frontendUrls.split(",");
+                
                 registry.addMapping("/**")
-                    .allowedOrigins(frontendUrl)
+                    .allowedOrigins(allowedOrigins)
                     .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                     .allowedHeaders("*")
                     .allowCredentials(false)

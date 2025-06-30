@@ -9,7 +9,7 @@ services:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
       - key: FRONTEND_URL
-        value: # You'll add your frontend URL here after deploying frontend
+        value: https://label-frontend-rho.vercel.app
     regions:
       - us-east-1
     plan: free  # or starter, standard, pro based on your needs 
